@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b2dc3f9e99.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+</head>
+<body>
+  <header class="cabeçalho">
+    <div class="container">
+      <input type="checkbox" id="menu" class="containerButton">
+      <label for="menu" class="containerLabel">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <ul class="menuList">
+        <li class="titleMenuList">Categories</li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Action</a>
+        </li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Adventure</a>
+        </li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Comedy</a>
+        </li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Drama</a>
+        </li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Mystery</a>
+        </li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Romance</a>
+        </li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Sci-Fi</a>
+        </li>
+        <li class="itemMenuList">
+          <a href="#" class="linkMenuList">Horror</a>
+        </li>
+      </ul>
+      <img src="#" alt="logo site" class="containerImage">
+      <h1 class="containerTitle">AnimeList</h1>
+    </div>
+
+    <ul class="options">
+      <input type="checkbox" id="menuOptions" class="buttonOptions">
+      <li class="itemOptions">
+        <a href="#" class="linkOptions">Categories</a>
+      </li>
+      <li class="itemOptions">
+        <a href="#" class="linkOptions">Favourites</a>
+      </li>
+      <li class="itemOptions">
+        <a href="#" class="linkOptions">My list</a>
+      </li>
+    </ul>
+
+    <div class="container">
+      <a href="#">
+        <i class="fa-regular fa-heart" id="favourite"></i>
+      </a>
+      <a href="#">
+        <i class="fa-regular fa-clipboard" id="my list"></i>
+      </a>
+      <a href="#">
+        <i class="fa-regular fa-user" id="profile"></i>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="searchBox">
+      <input type="text" placeholder="Type to search.." id="searchInput">
+      <div class="searchButton">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="cancelButton">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="searchData">Searching..</div>
+    </div>
+  </main>
+
+  <section class="banner">
+    <h2 class="titleBanner">Anime Name</h2>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
