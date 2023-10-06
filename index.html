@@ -9,14 +9,14 @@
   <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 </head>
 <body>
-  <header class="cabeçalho">
-    <div class="container">
+  <header class="header">
+    <div class="container1">
       <input type="checkbox" id="menu" class="containerButton">
       <label for="menu" class="containerLabel">
         <i class="fa-solid fa-bars"></i>
       </label>
       <ul class="menuList">
-        <li class="titleMenuList">Categories</li>
+        <li class="titleMenuList">Genres</li>
         <li class="itemMenuList">
           <a href="#" class="linkMenuList">Action</a>
         </li>
@@ -42,52 +42,83 @@
           <a href="#" class="linkMenuList">Horror</a>
         </li>
       </ul>
-      <img src="#" alt="logo site" class="containerImage">
-      <h1 class="containerTitle">AnimeList</h1>
     </div>
 
-    <ul class="options">
-      <input type="checkbox" id="menuOptions" class="buttonOptions">
-      <li class="itemOptions">
-        <a href="#" class="linkOptions">Categories</a>
-      </li>
-      <li class="itemOptions">
-        <a href="#" class="linkOptions">Favourites</a>
-      </li>
-      <li class="itemOptions">
-        <a href="#" class="linkOptions">My list</a>
-      </li>
-    </ul>
-
-    <div class="container">
-      <a href="#">
-        <i class="fa-regular fa-heart" id="favourite"></i>
-      </a>
-      <a href="#">
-        <i class="fa-regular fa-clipboard" id="my list"></i>
-      </a>
-      <a href="#">
-        <i class="fa-regular fa-user" id="profile"></i>
-      </a>
+    <div class="containerNavOptions">
+      <div class="containerNavOptionsFlex">
+        <div class="siteLogo">
+          <img src="#" alt="logo site" class="containerImage">
+          <h1 class="containerTitle">AnimeList</h1>
+        </div>
+        <nav>
+          <ul class="options">
+            <!-- <input type="checkbox" id="genresBtn" class="buttonOptions"> -->
+            <li class="itemOptions">
+              <a href="#" class="linkOptions">Genres</a>
+            </li>
+            <!-- <input type="checkbox" id="favBtn" class="buttonOptions"> -->
+            <li class="itemOptions">
+              <a href="#" class="linkOptions">Favorites</a>
+            </li>
+            <!-- <input type="checkbox" id="listBtn" class="buttonOptions"> -->
+            <li class="itemOptions">
+              <a href="#" class="linkOptions">My list</a>
+            </li>
+          </ul>
+        </nav>  
+        <div class="containerIcons">
+          <a href="#" class="menuIcons">
+            <i class="fa-regular fa-heart" id="favourite"></i>
+          </a>
+          <a href="#" class="menuIcons">
+            <i class="fa-regular fa-clipboard" id="my list"></i>
+          </a>
+          <a href="#" class="menuIcons">
+            <i class="fa-regular fa-user" id="profile"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
-    <div class="searchBox">
-      <input type="text" placeholder="Type to search.." id="searchInput">
-      <div class="searchButton">
-        <i class="fa-solid fa-magnifying-glass"></i>
+    <section>
+      <div class="searchBox">
+        <input type="text" placeholder="Type to search.." id="searchInput" value="dragon ball">
+        <div class="searchButton">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="cancelButton">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="searchData">Searching..</div>
       </div>
-      <div class="cancelButton">
-        <i class="fa-solid fa-xmark"></i>
+    </section>
+
+    <section class="banner">
+      <h2 class="titleBanner">Anime Name</h2>
+    </section>
+
+    <section class="containerList">
+      <div id="searchResultText"></div>
+      <div class="searchListIcons">
+        <i id="searchListIconInline" class="fa-solid fa-bars"></i>
+        <i id="searchListIconGrid" class="fa-solid fa-grip"></i>
       </div>
-      <div class="searchData">Searching..</div>
-    </div>
+      <div id="searchList">
+        <!-- <h2 class="animeTitle">Title</h2>
+        <h2 class="animeJapTitle">Jap Title</h2>
+        <h3 class="episodes">Episodes</h3>
+        <h3 class="genres">Genres</h3>
+        <img src="#" alt="animeImg" class="animeImg">
+        <h3 class="studios">Studios</h3>
+        <p class="aired">Aired</p>
+        <p class="synopsis">Synopsis</p>
+        <a href="" class="animeUrl">Url</a> -->
+      </div>
+    </section>
   </main>
 
-  <section class="banner">
-    <h2 class="titleBanner">Anime Name</h2>
-  </section>
   <script src="script.js"></script>
 </body>
 
