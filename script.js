@@ -4,6 +4,7 @@ const searchBox = document.querySelector(".searchBox");
 const searchInput = document.querySelector("#searchInput");
 const searchData = document.querySelector(".searchData");
 const banner = document.querySelector(".banner");
+const titleBanner = document.querySelector(".titleBanner");
 
 //consts searchList
 const containerList = document.querySelector(".containerList");
@@ -27,7 +28,7 @@ window.addEventListener("scroll", function(){
   header.classList.toggle('roll', window.scrollY > 0)
 })
 
-// 
+
 
 searchButton.onmouseover = () => {
   searchBox.classList.add("active");
@@ -50,7 +51,8 @@ searchButton.onclick = () => {
   if(searchInput.value.length != 0){
     searchAnime();
     renderSearch();
-    banner.style.display = "none";
+    titleBanner.style.display = "block";
+    titleBanner.innerHTML = "Searching..."
   }else{
     console.log(searchInput.value.length);
   }
@@ -78,7 +80,8 @@ searchInput.addEventListener('keyup', function(e){
     if(searchInput.value.length != 0){
       searchAnime();
       renderSearch();
-      banner.style.display = "none";
+      titleBanner.style.display = "block";
+      titleBanner.innerHTML = "Searching..."
     }else{
       console.log(searchInput.value.length);
     }
@@ -91,6 +94,7 @@ const searchAnime = async () => {
                       .then(response => response.json())
                       .then(json => json)
                       .catch(erro => console.log(erro));
+  titleBanner.style.display = "none";
   console.log(response);
   return response
 }

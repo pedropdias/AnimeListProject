@@ -140,7 +140,6 @@ main {
   display: grid;
   height: 100%;
   place-items: center;
-  margin-top: 170px;
 }
 
 .searchBox {
@@ -149,6 +148,7 @@ main {
   width: 10px;
   right: 20px;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-top: 210px;
 }
 
 .searchBox.active {
@@ -236,7 +236,8 @@ main {
 /* SearchList Results */
 
 .banner {
-  margin-top: 100px;
+  margin-top: 40px;
+  font-size: 0.8rem;
 }
 
 .containerList {
@@ -283,6 +284,10 @@ main {
   margin-bottom: 40px;
 }
 
+.searchListGrid .animeItem {
+  /* width: 40px; */
+}
+
 .searchListGrid {
   display: flex;
   flex-direction: row;
@@ -300,6 +305,7 @@ main {
   position: relative;
   max-width: 170px;
   min-width: 170px;
+  align-items: center;
 }
 
 .animeTitleWrapper {
@@ -308,8 +314,18 @@ main {
   /* display: none; */
 }
 
+.searchListGrid .animeTitle {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.searchListGrid .animeEnglishTitle {
+  text-align: center;
+}
+
 .searchListGrid .animeTitleWrapper {
   margin: 0;
+  margin-top: 10px;
 }
 
 .animeEnglishTitle {
@@ -334,3 +350,4 @@ a:visited {
   text-decoration: none;
   color: white;
 }
+
