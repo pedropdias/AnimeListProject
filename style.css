@@ -286,10 +286,6 @@ main {
   margin-bottom: 40px;
 }
 
-.searchListGrid .animeItem {
-  /* width: 40px; */
-}
-
 .searchListGrid {
   display: flex;
   flex-direction: row;
