@@ -15,6 +15,10 @@ const animeRenderSearch = async () => {
 }
 
 const animeInnerHTML = (data) => {
+
+  const synopsis = data.synopsis;
+  const shortSynopsis = synopsis.length > 200 ? synopsis.slice(0, 420) + "..." : synopsis;
+
   return (
     `<div class="anime-container">
       <div class="anime-info">
@@ -25,13 +29,17 @@ const animeInnerHTML = (data) => {
           <h1>${data.title}</h1>
           <h2>${data.title_english}</h2>
           <h2>${data.title_japanese}</h2>
+          <p class="synopsis-text">${shortSynopsis}</p>
         </div>
       </div>
-      <div class="trailer">
-        <video controls width="500" poster=${data.trailer.images.large_image_url}>
-          <source src="${data.trailer.url}" type="video/mp4">
-          Seu navegador não suporta a reprodução de vídeos.
-        </video>
+      <div class="trailer-container">
+        <div class="trailer-content">
+          <h2>Watch the trailer:</h2>
+          <video controls width="500" poster=${data.trailer.images.large_image_url}>
+            <source src="${data.trailer.url}" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+        </div>
       </div>
     </div>`
   )
