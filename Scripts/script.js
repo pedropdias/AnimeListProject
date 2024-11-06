@@ -116,17 +116,17 @@ const renderSearch = async () => {
 
       return(
         `<div class="animeItem">
-          <a href="../Pages/${animeLink}">
+          <a href="./Pages/${animeLink}">
             <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
           </a>
           <div class="animeTitleWrapper">
             <h1 class="animeTitle">
-            <a href="../Pages/${animeLink}">
+            <a href="./Pages/${animeLink}">
               ${item.title}
             </a>  
             </h1>
             <h2 class="animeEnglishTitle">
-            <a href="../Pages/${animeLink}">
+            <a href="./Pages/${animeLink}">
               ${item.title_english ? item.title_english : ""}
             </a>
             </h2>
