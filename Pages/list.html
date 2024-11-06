@@ -4,14 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anime List</title>
-  <link rel="stylesheet" href="./Styles/style.css">
+  <link rel="stylesheet" href="../Styles/style.css">
+  <link rel="stylesheet" href="../Styles/list.css">
   <script src="https://kit.fontawesome.com/b2dc3f9e99.js" crossorigin="anonymous"></script>
-  <style>
-    #homeOptionTitle {
-      text-decoration: underline;
-      text-underline-offset: 0.4rem;
-    }
-  </style>
   <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 </head>
 <body>
@@ -42,16 +37,16 @@
       <div class="containerNavOptionsFlex">
         <div class="siteLogo">
           <!-- <img src="#" alt="logo site" class="containerImage"> -->
-          <h1 class="containerTitle"><a href="./index.html">AnimeList</a></h1>
+          <h1 class="containerTitle"><a href="../index.html">AnimeList</a></h1>
         </div>
         <nav>
           <ul class="options">
             <li class="itemOptions">
-              <a href="./index.html" class="linkOptions" id="homeOptionTitle">Home</a>
+              <a href="../index.html" class="linkOptions" id="homeOptionTitle">Home</a>
             </li>
             <!-- <input type="checkbox" id="seasonsBtn" class="buttonOptions"> -->
             <li class="itemOptions">
-              <a href="./Pages/seasons.html" class="linkOptions">Current Season</a>
+              <a href="./seasons.html" class="linkOptions">Current Season</a>
             </li>
             <!-- <input type="checkbox" id="favBtn" class="buttonOptions"> -->
             <!-- <li class="itemOptions">
@@ -59,20 +54,20 @@
             </li> -->
             <!-- <input type="checkbox" id="listBtn" class="buttonOptions"> -->
             <li class="itemOptions">
-              <a href="./Pages/list.html" class="linkOptions">My list</a>
+              <a href="./list.html" class="linkOptions" id="listOptionTitle">My list</a>
             </li>
           </ul>
         </nav>  
         <div class="containerIcons">
-          <a href="./Pages/seasons.html" class="menuIcons">
+          <a href="./seasons.html" class="menuIcons">
             <i class="fa-regular fa-calendar" id="seasons"></i>
             <!-- <i class="fa-solid fa-calendar" id="seasons-solid"></i> -->
           </a>
-          <a href="./Pages/list.html" class="menuIcons">
+          <a href="./list.html" class="menuIcons">
             <i class="fa-regular fa-heart" id="my-list"></i>
             <!-- <i class="fa-solid fa-heart" id="my-list-solid"></i> -->
           </a>
-          <a href="./index.html" class="menuIcons">
+          <a href="../index.html" class="menuIcons">
             <i class="fa-solid fa-house" id="home"></i>
           </a>
         </div>
@@ -81,23 +76,6 @@
   </header>
 
   <main>
-    <section>
-      <div class="searchBox">
-        <input type="text" placeholder="Type to search.." id="searchInput" value="">
-        <div class="searchButton">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <div class="cancelButton">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="searchData">Searching..</div>
-      </div>
-    </section>
-
-  <section class="banner">
-    <h2 class="titleBanner">Search an anime.</h2>
-  </section>
-
     <section class="containerList">
       <div id="searchResultText"></div>
       <div class="searchListIcons">
@@ -118,7 +96,7 @@
     </section>
   </main>
 
-  <script src="./Scripts/script.js"></script>
+  <script src="../Scripts/script.js"></script>
 </body>
 
 </html>

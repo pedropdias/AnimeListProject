@@ -10,6 +10,7 @@ window.addEventListener("scroll", function(){
   header.classList.toggle('roll', window.scrollY > 0)
 })
 
+// Remove searchListGrid class
 searchListIconInline.onclick = () => {
   searchListIconInline.style.backgroundColor = "white";
   searchListIconInline.style.color = "rgb(26, 26, 26)";
@@ -18,6 +19,7 @@ searchListIconInline.onclick = () => {
   seasonAnimeList.classList.remove("searchListGrid");
 }
 
+// Add searchListGrid class
 searchListIconGrid.onclick = () => {
   searchListIconGrid.style.backgroundColor = "white";
   searchListIconGrid.style.color = "rgb(26, 26, 26)";
@@ -44,17 +46,20 @@ const renderSeason = async () => {
   titleMenuListSeasons.innerHTML = `${searchResultSeason.data[0].season} Season`;
 
   seasonAnimeList.innerHTML = searchResultSeason.data.map((item) => {
+
+    const animeLink = `anime.html?id=${item.mal_id}`;
+
     return(
       `<div class="animeItem">
         <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
         <div class="animeTitleWrapper">
           <h1 class="animeTitle">
-          <a href="index.html">
+          <a href="../Pages/${animeLink}">
             ${item.title}
           </a>  
           </h1>
           <h2 class="animeEnglishTitle">
-          <a href="index.html" target="_blank">
+          <a href="../Pages/${animeLink}">
             ${item.title_english ? item.title_english : ""}
           </a>
           </h2>

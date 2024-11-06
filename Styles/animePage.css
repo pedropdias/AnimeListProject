@@ -1,0 +1,37 @@
+.anime-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  width: 70vw;
+}
+
+.anime-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.anime-titles h1{
+  margin-bottom: 20px;
+}
+
+.anime-titles h2 {
+  font-size: 0.8rem;
+}
+
+.anime-image img{
+  width: 200px;
+  margin-right: 24px;
+  border-radius: 10px;
+}
+
+.trailer {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.trailer video {
+  border-radius: 14px;
+}

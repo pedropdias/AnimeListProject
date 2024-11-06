@@ -111,17 +111,22 @@ const renderSearch = async () => {
     searchListIconGrid.style.display = "inline-block";
     document.getElementById("searchResultText").innerHTML = `<h1>Search Results for "${searchInput.value}"</h1>`;
     document.getElementById("searchList").innerHTML = searchResult.data.map((item) => {
+
+      const animeLink = `anime.html?id=${item.mal_id}`;
+
       return(
         `<div class="animeItem">
-          <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
+          <a href="../Pages/${animeLink}">
+            <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
+          </a>
           <div class="animeTitleWrapper">
             <h1 class="animeTitle">
-            <a href="index.html">
+            <a href="../Pages/${animeLink}">
               ${item.title}
             </a>  
             </h1>
             <h2 class="animeEnglishTitle">
-            <a href="index.html" target="_blank">
+            <a href="../Pages/${animeLink}">
               ${item.title_english ? item.title_english : ""}
             </a>
             </h2>
