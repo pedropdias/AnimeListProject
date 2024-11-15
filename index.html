@@ -12,7 +12,6 @@
       text-underline-offset: 0.4rem;
     }
   </style>
-  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 </head>
 <body>
   <header class="header">
@@ -83,7 +82,7 @@
   <main>
     <section>
       <div class="searchBox">
-        <input type="text" placeholder="Type to search.." id="searchInput" value="">
+        <input type="text" placeholder="Type to search.." id="searchInput" value="dragon ball">
         <div class="searchButton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
@@ -101,10 +100,10 @@
     <section class="containerList">
       <div id="searchResultText"></div>
       <div class="searchListIcons">
-        <i id="searchListIconInline" class="fa-solid fa-bars"></i>
         <i id="searchListIconGrid" class="fa-solid fa-grip"></i>
+        <i id="searchListIconInline" class="fa-solid fa-bars"></i>
       </div>
-      <div id="searchList">
+      <div id="searchList" class="searchListGrid">
         <!-- <h2 class="animeTitle">Title</h2>
         <h2 class="animeJapTitle">Jap Title</h2>
         <h3 class="episodes">Episodes</h3>
@@ -119,6 +118,7 @@
   </main>
 
   <script src="./Scripts/script.js"></script>
+  <script src="./Scripts/favoriteButton.js"></script>
 </body>
 
 </html>

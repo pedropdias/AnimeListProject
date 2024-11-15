@@ -72,10 +72,10 @@
 
 #searchListIconInline {
   display: flex;
+  color: rgb(26, 26, 26);
+  background-color: white;
   cursor: pointer;
   font-size: 1.3rem;
-  color: rgb(26,26,26);
-  background-color: white;
   padding: 7px;
   border-radius: 50%;
   transition: 150ms;
@@ -83,11 +83,14 @@
 
 #searchListIconGrid {
   display: flex;
+  color: white;
+  background-color: transparent;
   cursor: pointer;
   font-size: 1.4rem;
   padding: 7px;
   border-radius: 50%;
   transition: 150ms;
+  
 }
 
 /* #searchList {
@@ -150,6 +153,10 @@
   margin-left: 0.8px;
   margin-top: 5px;
   text-align: left;
+}
+
+.animeSynopsis {
+  text-align: start;
 }
 
 a {

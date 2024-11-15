@@ -20,6 +20,7 @@ const synopsis = document.querySelector(".synopsis");
 const animeUrl = document.querySelector(".animeUrl");
 const searchListIconInline = document.querySelector("#searchListIconInline");
 const searchListIconGrid = document.querySelector("#searchListIconGrid");
+const animeSynopsis = document.querySelector(".animeSynopsis")
 
 // page scroll
 
@@ -61,7 +62,7 @@ searchButton.onclick = () => {
 searchListIconInline.onclick = () => {
   searchListIconInline.style.backgroundColor = "white";
   searchListIconInline.style.color = "rgb(26, 26, 26)";
-  searchListIconGrid.style.backgroundColor = "";
+  searchListIconGrid.style.backgroundColor = "transparent";
   searchListIconGrid.style.color = "white";
   searchList.classList.remove("searchListGrid");
 }
@@ -113,7 +114,12 @@ const renderSearch = async () => {
     document.getElementById("searchList").innerHTML = searchResult.data.map((item) => {
 
       const animeLink = `anime.html?id=${item.mal_id}`;
+      const maxSynopsisLength = 150;
 
+      if (item.synopsis && item.synopsis.length > maxSynopsisLength) {
+        item.synopsis = item.synopsis.substring(0, maxSynopsisLength) + "...";
+      }
+          
       return(
         `<div class="animeItem">
           <a href="./Pages/${animeLink}">
@@ -130,7 +136,13 @@ const renderSearch = async () => {
               ${item.title_english ? item.title_english : ""}
             </a>
             </h2>
+            <p class="animeSynopsis">
+              <a href="./Pages/${animeLink}">
+                ${item.synopsis ? item.synopsis : ""}
+              </a>
+            </p>
           </div>
+          <button class="fa-regular fa-heart favorite-button" animeId=${item.mal_id}></button>
         </div>`
       )
     }).join('');

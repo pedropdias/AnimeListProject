@@ -260,8 +260,7 @@ main {
   display: none;
   cursor: pointer;
   font-size: 1.3rem;
-  color: rgb(26,26,26);
-  background-color: white;
+  color: white;
   padding: 7px;
   border-radius: 50%;
   transition: 150ms;
@@ -271,6 +270,8 @@ main {
   display: none;
   cursor: pointer;
   font-size: 1.4rem;
+  background-color: white;
+  color: rgb(26, 26, 26);
   padding: 7px;
   border-radius: 50%;
   transition: 150ms;
@@ -284,6 +285,12 @@ main {
 .animeItem {
   display: flex;
   margin-bottom: 40px;
+  padding: 12px 8px;
+  border-radius: 12px;
+}
+
+.animeItem:hover {
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.25);
 }
 
 .searchListGrid {
@@ -292,18 +299,31 @@ main {
   flex-wrap: wrap;
   margin-bottom: 40px;
   position: relative;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
 }
 
 .searchListGrid .animeItem {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   position: relative;
   max-width: 170px;
   min-width: 170px;
   align-items: center;
+}
+
+.searchListGrid p{
+  display: none;
+}
+
+.animeItem .animeSynopsis {
+  margin-top: 42px;
+}
+
+.animeItem .animeImg {
+  border-radius: 12px;
+  width: 165px;
 }
 
 .animeTitleWrapper {
@@ -313,12 +333,13 @@ main {
 }
 
 .searchListGrid .animeTitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
 .searchListGrid .animeEnglishTitle {
   text-align: center;
+  font-size: 0.7rem;
 }
 
 .searchListGrid .animeTitleWrapper {
@@ -330,6 +351,21 @@ main {
   font-size: 0.9rem;
   margin-left: 0.8px;
   margin-top: 5px;
+}
+
+.favorite-button {
+  color: white;
+  background-color: transparent;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.favorite-button:hover {
+  color:rgb(241, 78, 154);
 }
 
 #searchResultText {

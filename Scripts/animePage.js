@@ -17,7 +17,11 @@ const animeRenderSearch = async () => {
 const animeInnerHTML = (data) => {
 
   const synopsis = data.synopsis;
-  const shortSynopsis = synopsis.length > 200 ? synopsis.slice(0, 420) + "..." : synopsis;
+  const shortSynopsis = ""
+
+  if (synopsis) {
+    const shortSynopsis = synopsis.length > 200 ? synopsis.slice(0, 420) + "..." : synopsis;
+  }
 
   return (
     `<div class="anime-container">
@@ -26,9 +30,9 @@ const animeInnerHTML = (data) => {
           <img src="${data.images.jpg.large_image_url}">
         </div>
         <div class="anime-titles">
-          <h1>${data.title}</h1>
-          <h2>${data.title_english}</h2>
-          <h2>${data.title_japanese}</h2>
+          <h1>${data.title ? data.title : "title not found :/"}</h1>
+          <h2>${data.title_english ? data.title_english : ""}</h2>
+          <h2>${data.title_japanese ? data.title_japanese : ""}</h2>
           <p class="synopsis-text">${shortSynopsis}</p>
         </div>
       </div>

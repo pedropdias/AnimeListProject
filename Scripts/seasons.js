@@ -14,7 +14,7 @@ window.addEventListener("scroll", function(){
 searchListIconInline.onclick = () => {
   searchListIconInline.style.backgroundColor = "white";
   searchListIconInline.style.color = "rgb(26, 26, 26)";
-  searchListIconGrid.style.backgroundColor = "";
+  searchListIconGrid.style.backgroundColor = "transparent";
   searchListIconGrid.style.color = "white";
   seasonAnimeList.classList.remove("searchListGrid");
 }
@@ -48,22 +48,35 @@ const renderSeason = async () => {
   seasonAnimeList.innerHTML = searchResultSeason.data.map((item) => {
 
     const animeLink = `anime.html?id=${item.mal_id}`;
+    const maxSynopsisLength = 150;
+
+      if (item.synopsis && item.synopsis.length > maxSynopsisLength) {
+        item.synopsis = item.synopsis.substring(0, maxSynopsisLength) + "...";
+      }
 
     return(
       `<div class="animeItem">
-        <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
+        <a href="../Pages/${animeLink}">
+          <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
+        </a>
         <div class="animeTitleWrapper">
           <h1 class="animeTitle">
-          <a href="../Pages/${animeLink}">
-            ${item.title}
-          </a>  
+            <a href="../Pages/${animeLink}">
+              ${item.title}
+            </a>  
           </h1>
           <h2 class="animeEnglishTitle">
-          <a href="../Pages/${animeLink}">
-            ${item.title_english ? item.title_english : ""}
-          </a>
+            <a href="../Pages/${animeLink}">
+              ${item.title_english ? item.title_english : ""}
+            </a>
           </h2>
+          <p class="animeSynopsis">
+              <a href="../Pages/${animeLink}">
+                ${item.synopsis ? item.synopsis : ""}
+              </a>
+            </p>
         </div>
+        <button class="favorite-button" animeId=${item.mal_id}></button>
       </div>`
     )
   }).join('');
