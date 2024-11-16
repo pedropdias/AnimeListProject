@@ -76,7 +76,9 @@ const renderSeason = async () => {
               </a>
             </p>
         </div>
-        <button class="favorite-button" animeId=${item.mal_id}></button>
+        <div class="button-box">
+          <button class="fa-regular fa-heart favorite-button" animeId=${item.mal_id}></button>
+        </div>
       </div>`
     )
   }).join('');

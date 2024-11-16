@@ -1,16 +1,44 @@
-console.log("rodando")
-const searchList = document.querySelector("#searchList")
+// import { renderMyList } from "./myList";
+
+const favoriteButton = document.querySelector(".favorite-button");
+const body = document.body;
 
 
-searchList.addEventListener("click", (event) => {
-  console.log("aqui")
-  if (event.target.classList.contais("fa-regular")) {
-    event.target.classList.remove("fa-regular")
-    event.target.classList.add("fa-solid")
-    console.log("aqui2")
-  } else {
-    event.target.classList.remove("fa-solid")
-    event.target.classList.add("fa-regular")
-    console.log("aqui3")
+body.addEventListener("click", (event) => {
+
+  // Confere se o elemento é um ícone válido
+  if (event.target.classList.contains("fa-heart")) {
+    const targetClassList = event.target.classList;
+    const animeId = event.target.getAttribute("animeId");
+    let myList = JSON.parse(localStorage.getItem("myAnimeList")) || [];
+
+    console.log(localStorage)
+
+    // Troca a classe do ícone clicado
+    if (targetClassList.contains("fa-regular")) {
+      if (!myList.includes(animeId)) {
+        myList.push(animeId);
+        localStorage.setItem("myAnimeList", JSON.stringify(myList));
+        window.alert("Anime added to my list.")
+      } else {
+        window.alert("Anime already in my list.")
+      }
+
+      targetClassList.remove("fa-regular");
+      targetClassList.add("fa-solid");
+
+    } else if (targetClassList.contains("fa-solid")) {
+      if (myList.includes(animeId)) {
+        myList = myList.filter(id => id !== animeId);
+        localStorage.setItem("myAnimeList", JSON.stringify(myList));
+        window.alert("Anime has been removed from my list.")
+      }
+      targetClassList.remove("fa-solid");
+      targetClassList.add("fa-regular");
+    }
   }
-})
+//   if (window.location.pathname === '/list.html') {
+//   renderMyList();
+// }
+});
+

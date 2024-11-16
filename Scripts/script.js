@@ -8,7 +8,7 @@ const titleBanner = document.querySelector(".titleBanner");
 
 //consts searchList
 const containerList = document.querySelector(".containerList");
-const searchList = document.querySelector("#searchList");
+export const searchList = document.querySelector("#searchList");
 const animeTitle = document.querySelector(".animeTitle");
 const animeJapTitle = document.querySelector(".animeJapTitle");
 const episodes = document.querySelector(".episodes");
@@ -64,6 +64,7 @@ searchListIconInline.onclick = () => {
   searchListIconInline.style.color = "rgb(26, 26, 26)";
   searchListIconGrid.style.backgroundColor = "transparent";
   searchListIconGrid.style.color = "white";
+  searchList.classList.add("searchListInline");
   searchList.classList.remove("searchListGrid");
 }
 
@@ -73,6 +74,7 @@ searchListIconGrid.onclick = () => {
   searchListIconInline.style.backgroundColor = "transparent";
   searchListIconInline.style.color = "white";
   searchList.classList.add("searchListGrid");
+  searchList.classList.remove("searchListInline");
 }
 
 searchInput.addEventListener('keyup', function(e){
@@ -122,7 +124,8 @@ const renderSearch = async () => {
           
       return(
         `<div class="animeItem">
-          <a href="./Pages/${animeLink}">
+          <div class="anime-info">
+            <a href="./Pages/${animeLink}">
             <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
           </a>
           <div class="animeTitleWrapper">
@@ -142,7 +145,10 @@ const renderSearch = async () => {
               </a>
             </p>
           </div>
-          <button class="fa-regular fa-heart favorite-button" animeId=${item.mal_id}></button>
+          </div>
+          <div class="favorite-button-container">
+            <button class="fa-regular fa-heart favorite-button" animeId=${item.mal_id}></button>
+          </div>
         </div>`
       )
     }).join('');

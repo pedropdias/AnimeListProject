@@ -1,43 +1,20 @@
-@charset "UTF-8";
-
-@font-face {
-  font-family: chirp;
-  src: url(fonts/chirp_regular.otf);
-  font-weight: normal;
-  font-style: normal;
+.containerList {
+  width: 100vw;
 }
 
-* {
-  margin: 0;
-  font-family: "chirp";
-}
-
-body {
-  background-color: rgb(26, 26, 26);
-  color: white;
-  display: grid;
-  place-items: center;
-}
-
-header {
-  margin-bottom: 100px;
-  color: white;
+#my-list-container {
   display: flex;
-  width: 100%;
-  height: fit-content;
-  position: relative;
-  /* margin-top: 15px; */
-  padding-top: 20px;
-  padding-bottom: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: 200ms;
-  z-index: 999;
+  flex-direction: column;
+  gap: 20px;
 }
 
+.anime-box {
+  display: flex;
+  flex-direction: row;
+}
 
-#listOptionTitle {
-  text-decoration: underline;
-  text-underline-offset: 0.4rem;
+.anime-box img{
+  width: 150px;
+  border-radius: 12px;
+  margin-right: 20px;
 }
