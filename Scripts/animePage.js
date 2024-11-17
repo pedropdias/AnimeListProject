@@ -47,8 +47,10 @@ const animeInnerHTML = (data) => {
       <div class="trailer-container">
         <div class="trailer-content">
           <h2>Watch the trailer:</h2>
-          <iframe poster=${data.trailer.images.large_image_url}
-            src="${data.trailer.url.replace("watch", "embed")}">
+          <iframe src="${data.trailer.url.replace("watch?v=", "embed/")}"
+                  title="YouTube video player" frameborder="0" allow="accelerometer;
+                  autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+                  web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
           </iframe>
         </div>
       </div>

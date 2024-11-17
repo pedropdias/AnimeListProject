@@ -57,8 +57,10 @@
   align-items: center;
 }
 
-.trailer-container video {
+.trailer-container iframe {
   border-radius: 14px;
+  width: 560px;
+  aspect-ratio: 16 / 9;
 }
 
 .trailer-content {
@@ -94,5 +96,9 @@
 
   .trailer-container h2 {
     font-size: 1.1rem;
+  }
+
+  .trailer-container iframe {
+    width: 70vw;
   }
 }
