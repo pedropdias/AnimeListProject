@@ -15,7 +15,7 @@ body.addEventListener("click", (event) => {
     console.log(localStorage)
 
     // Troca a classe do ícone clicado
-    if (targetClassList.contains("fa-regular")) {
+    if (targetClassList.contains("fa-regular") && !event.target.id.includes("my-list")) {
       if (!myList.includes(animeId)) {
         myList.push(animeId);
         localStorage.setItem("myAnimeList", JSON.stringify(myList));
