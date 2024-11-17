@@ -19,10 +19,13 @@ const animeInnerHTML = (data) => {
   const synopsis = data.synopsis;
   let shortSynopsis = "";
 
-  console.log(synopsis)
-
   if (synopsis) {
     shortSynopsis = synopsis.length > 200 ? synopsis.slice(0, 420) + "..." : synopsis;
+  }
+
+  let trailerUrl = data.trailer.url
+  if (trailerUrl) {
+    trailerUrl = trailerUrl.replace("watch?v=", "embed/")
   }
 
   return (
@@ -46,8 +49,8 @@ const animeInnerHTML = (data) => {
       </div>
       <div class="trailer-container">
         <div class="trailer-content">
-          <h2>Watch the trailer:</h2>
-          <iframe src="${data.trailer.url.replace("watch?v=", "embed/")}"
+          <h2>${trailerUrl ? "Watch the trailer:" : ""}</h2>
+          <iframe src="${trailerUrl ? trailerUrl : ""}"
                   title="YouTube video player" frameborder="0" allow="accelerometer;
                   autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
                   web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
