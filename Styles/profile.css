@@ -123,7 +123,7 @@
 
 @media only screen and (max-width: 600px) {
   .profile-container {
-    width: auto;
+    padding: 0 50px;
   }
   
   .numbers-info-box {
@@ -132,5 +132,9 @@
 
   .community-posts-container {
     width: auto;
+  }
+
+  audio {
+    width: 260px;
   }
 }
