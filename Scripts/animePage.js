@@ -47,10 +47,9 @@ const animeInnerHTML = (data) => {
       <div class="trailer-container">
         <div class="trailer-content">
           <h2>Watch the trailer:</h2>
-          <video controls poster=${data.trailer.images.large_image_url}>
-            <source src="${data.trailer.url}" type="video/mp4">
-            Seu navegador não suporta a reprodução de vídeos.
-          </video>
+          <iframe poster=${data.trailer.images.large_image_url}
+            src="${data.trailer.url.replace("watch", "embed")}">
+          </iframe>
         </div>
       </div>
     </div>`

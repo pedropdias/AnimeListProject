@@ -1,7 +1,7 @@
-// import { renderMyList } from "./myList";
+import { showAddAlert, showRemoveAlert } from "./customAlert.js";
 
 const favoriteButton = document.querySelector(".favorite-button");
-const body = document.body;
+export const body = document.body;
 
 
 body.addEventListener("click", (event) => {
@@ -19,26 +19,26 @@ body.addEventListener("click", (event) => {
       if (!myList.includes(animeId)) {
         myList.push(animeId);
         localStorage.setItem("myAnimeList", JSON.stringify(myList));
-        window.alert("Anime added to my list.")
+        targetClassList.remove("fa-regular");
+        targetClassList.add("fa-solid");
+        showAddAlert("Anime added to my list");
       } else {
-        window.alert("Anime already in my list.")
+        targetClassList.remove("fa-regular");
+        targetClassList.add("fa-solid");
+        showAddAlert("Anime already in my list.")
       }
 
-      targetClassList.remove("fa-regular");
-      targetClassList.add("fa-solid");
+      
 
     } else if (targetClassList.contains("fa-solid")) {
       if (myList.includes(animeId)) {
         myList = myList.filter(id => id !== animeId);
         localStorage.setItem("myAnimeList", JSON.stringify(myList));
-        window.alert("Anime has been removed from my list.")
+        targetClassList.remove("fa-solid");
+        targetClassList.add("fa-regular");
+        showRemoveAlert("The anime has been removed from my list")
       }
-      targetClassList.remove("fa-solid");
-      targetClassList.add("fa-regular");
     }
   }
-//   if (window.location.pathname === '/list.html') {
-//   renderMyList();
-// }
 });
 

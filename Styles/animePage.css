@@ -41,6 +41,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 32px;
 }
 
 .favorite-box p {

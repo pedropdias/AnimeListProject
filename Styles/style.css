@@ -279,6 +279,7 @@ main {
 
 .animeItem {
   display: flex;
+  flex-direction: row;
   margin-bottom: 40px;
   padding: 12px 8px;
   border-radius: 12px;
@@ -291,6 +292,19 @@ main {
 
 .anime-info {
   display: flex;
+  flex-direction: row;
+}
+
+#anime-img {
+  height: 240px;
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.searchListGrid .anime-info {
   flex-direction: column;
 }
 
@@ -334,8 +348,9 @@ main {
 }
 
 .searchListInline .animeTitleWrapper {
-  margin-top: 12px;
-  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 }
 
 .searchListGrid .animeTitle {
@@ -443,4 +458,12 @@ a:visited {
     right: 10px;
   }
 
+  .searchListInline .anime-info {
+    flex-direction: column;
+  }
+
+  .searchListInline .animeTitleWrapper {
+    margin-left: 0;
+    margin-top: 12px;
+  }
 }

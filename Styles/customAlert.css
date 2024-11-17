@@ -1,0 +1,50 @@
+#custom-alert-container {
+  
+}
+
+.custom-add-alert {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #5cd36c;
+  color: #000000;
+  padding: 15px;
+  border-radius: 22px;
+  box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.custom-remove-alert {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #b33f3f;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 22px;
+  box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fa-check {
+  margin-left: 10px;
+  background-color: white;
+  padding: 7px 8px 7px 7px;
+  border-radius: 50%;
+}
+
+.fa-xmark {
+  margin-left: 10px;
+  background-color: white;
+  padding: 7px;
+  border-radius: 50%;
+  color: #000000;
+}

@@ -125,26 +125,26 @@ const renderSearch = async () => {
       return(
         `<div class="animeItem">
           <div class="anime-info">
-            <a href="./Pages/${animeLink}">
-            <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
-          </a>
-          <div class="animeTitleWrapper">
-            <h1 class="animeTitle">
-            <a href="./Pages/${animeLink}">
-              ${item.title}
-            </a>  
-            </h1>
-            <h2 class="animeEnglishTitle">
-            <a href="./Pages/${animeLink}">
-              ${item.title_english ? item.title_english : ""}
+            <a id="anime-img" href="./Pages/${animeLink}">
+              <img width="120px" src="${item.images.jpg.image_url}" class="animeImg" alt="">
             </a>
-            </h2>
-            <p class="animeSynopsis">
+            <div class="animeTitleWrapper">
+              <h1 class="animeTitle">
               <a href="./Pages/${animeLink}">
-                ${item.synopsis ? item.synopsis : ""}
+                ${item.title}
+              </a>  
+              </h1>
+              <h2 class="animeEnglishTitle">
+              <a href="./Pages/${animeLink}">
+                ${item.title_english ? item.title_english : ""}
               </a>
-            </p>
-          </div>
+              </h2>
+              <p class="animeSynopsis">
+                <a href="./Pages/${animeLink}">
+                  ${item.synopsis ? item.synopsis : ""}
+                </a>
+              </p>
+            </div>
           </div>
           <div class="favorite-button-container">
             <button class="fa-regular fa-heart favorite-button" animeId=${item.mal_id}></button>

@@ -6,37 +6,15 @@
   <title>Anime List</title>
   <link rel="stylesheet" href="../Styles/style.css">
   <link rel="stylesheet" href="../Styles/list.css">
+  <link rel="stylesheet" href="../Styles/customAlert.css">
   <script src="https://kit.fontawesome.com/b2dc3f9e99.js" crossorigin="anonymous"></script>
   <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 </head>
-<body>
+<body class="my-list-body">
   <header class="header">
-    <div class="container1">
-      <input type="checkbox" id="menu" class="containerButton">
-      <label for="menu" class="containerLabel">
-        <i class="fa-solid fa-bars"></i>
-      </label>
-      <ul class="menuList">
-        <li class="titleMenuList">Seasons</li>
-        <li class="itemMenuList">
-          <a href="#" class="linkMenuList">Spring</a>
-        </li>
-        <li class="itemMenuList">
-          <a href="#" class="linkMenuList">Summer</a>
-        </li>
-        <li class="itemMenuList">
-          <a href="#" class="linkMenuList">Autumn</a>
-        </li>
-        <li class="itemMenuList">
-          <a href="#" class="linkMenuList">Winter</a>
-        </li>
-      </ul>
-    </div>
-
     <div class="containerNavOptions">
       <div class="containerNavOptionsFlex">
         <div class="siteLogo">
-          <!-- <img src="#" alt="logo site" class="containerImage"> -->
           <h1 class="containerTitle"><a href="../index.html">AnimeList</a></h1>
         </div>
         <nav>
@@ -44,31 +22,29 @@
             <li class="itemOptions">
               <a href="../index.html" class="linkOptions" id="homeOptionTitle">Home</a>
             </li>
-            <!-- <input type="checkbox" id="seasonsBtn" class="buttonOptions"> -->
             <li class="itemOptions">
               <a href="./seasons.html" class="linkOptions">Current Season</a>
             </li>
-            <!-- <input type="checkbox" id="favBtn" class="buttonOptions"> -->
-            <!-- <li class="itemOptions">
-              <a href="favorites.html" class="linkOptions">Favorites</a>
-            </li> -->
-            <!-- <input type="checkbox" id="listBtn" class="buttonOptions"> -->
             <li class="itemOptions">
               <a href="./list.html" class="linkOptions" id="listOptionTitle">My list</a>
+            </li>
+            <li class="itemOptions">
+              <a href="./profile.html" class="linkOptions">Profile</a>
             </li>
           </ul>
         </nav>  
         <div class="containerIcons">
           <a href="./seasons.html" class="menuIcons">
             <i class="fa-regular fa-calendar" id="seasons"></i>
-            <!-- <i class="fa-solid fa-calendar" id="seasons-solid"></i> -->
           </a>
           <a href="./list.html" class="menuIcons">
             <i class="fa-regular fa-heart" id="my-list"></i>
-            <!-- <i class="fa-solid fa-heart" id="my-list-solid"></i> -->
           </a>
           <a href="../index.html" class="menuIcons">
             <i class="fa-solid fa-house" id="home"></i>
+          </a>
+          <a href="./profile.html" class="menuIcons">
+            <i class="fa-solid fa-user" id="profile-icon"></i>
           </a>
         </div>
       </div>
@@ -77,11 +53,7 @@
 
   <main>
     <section class="containerList">
-      <div id="searchResultText"></div>
-      <div class="searchListIcons">
-        <i id="searchListIconInline" class="fa-solid fa-bars"></i>
-        <i id="searchListIconGrid" class="fa-solid fa-grip"></i>
-      </div>
+      <h1 class="my-list-title">My List</h1>
       <div id="my-list-container">
 
       </div>
@@ -91,6 +63,8 @@
   <script src="../Scripts/script.js" type="module"></script>
   <script src="../Scripts/favoriteButton.js" type="module"></script>
   <script src="../Scripts/myList.js" type="module"></script>
+  <script src="../Scripts/myListRemoveButton.js" type="module"></script>
+  <script src="../Scripts/customAlert.js" type="module"></script>
 </body>
 
 </html>

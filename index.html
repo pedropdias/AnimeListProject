@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anime List</title>
   <link rel="stylesheet" href="./Styles/style.css">
+  <link rel="stylesheet" href="./Styles/customAlert.css">
   <script src="https://kit.fontawesome.com/b2dc3f9e99.js" crossorigin="anonymous"></script>
   <style>
     #homeOptionTitle {
@@ -48,17 +49,14 @@
             <li class="itemOptions">
               <a href="./index.html" class="linkOptions" id="homeOptionTitle">Home</a>
             </li>
-            <!-- <input type="checkbox" id="seasonsBtn" class="buttonOptions"> -->
             <li class="itemOptions">
               <a href="./Pages/seasons.html" class="linkOptions">Current Season</a>
             </li>
-            <!-- <input type="checkbox" id="favBtn" class="buttonOptions"> -->
-            <!-- <li class="itemOptions">
-              <a href="favorites.html" class="linkOptions">Favorites</a>
-            </li> -->
-            <!-- <input type="checkbox" id="listBtn" class="buttonOptions"> -->
             <li class="itemOptions">
               <a href="./Pages/list.html" class="linkOptions">My list</a>
+            </li>
+            <li class="itemOptions">
+              <a href="./Pages/profile.html" class="linkOptions">Profile</a>
             </li>
           </ul>
         </nav>  
@@ -73,6 +71,9 @@
           </a>
           <a href="./index.html" class="menuIcons">
             <i class="fa-solid fa-house" id="home"></i>
+          </a>
+          <a href="./Pages/profile.html" class="menuIcons">
+            <i class="fa-solid fa-user" id="profile-icon"></i>
           </a>
         </div>
       </div>
@@ -114,11 +115,13 @@
         <p class="synopsis">Synopsis</p>
         <a href="" class="animeUrl">Url</a> -->
       </div>
+      <div id="custom-alert-container"></div>
     </section>
   </main>
 
   <script src="./Scripts/script.js" type="module"></script>
   <script src="./Scripts/favoriteButton.js" type="module"></script>
+  <script src="./Scripts/customAlert.js" type="module"></script>
 </body>
 
 </html>

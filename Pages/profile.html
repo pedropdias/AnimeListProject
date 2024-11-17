@@ -36,7 +36,6 @@
     <div class="containerNavOptions">
       <div class="containerNavOptionsFlex">
         <div class="siteLogo">
-          <!-- <img src="#" alt="logo site" class="containerImage"> -->
           <h1 class="containerTitle"><a href="../index.html">AnimeList</a></h1>
         </div>
         <nav>
@@ -44,31 +43,30 @@
             <li class="itemOptions">
               <a href="../index.html" class="linkOptions" id="homeOptionTitle">Home</a>
             </li>
-            <!-- <input type="checkbox" id="seasonsBtn" class="buttonOptions"> -->
+
             <li class="itemOptions">
               <a href="./seasons.html" class="linkOptions">Current Season</a>
             </li>
-            <!-- <input type="checkbox" id="favBtn" class="buttonOptions"> -->
-            <!-- <li class="itemOptions">
-              <a href="favorites.html" class="linkOptions">Favorites</a>
-            </li> -->
-            <!-- <input type="checkbox" id="listBtn" class="buttonOptions"> -->
             <li class="itemOptions">
               <a href="./list.html" class="linkOptions" id="listOptionTitle">My list</a>
+            </li>
+            <li class="itemOptions">
+              <a href="./profile.html" class="linkOptions">Profile</a>
             </li>
           </ul>
         </nav>  
         <div class="containerIcons">
           <a href="./seasons.html" class="menuIcons">
             <i class="fa-regular fa-calendar" id="seasons"></i>
-            <!-- <i class="fa-solid fa-calendar" id="seasons-solid"></i> -->
           </a>
           <a href="./list.html" class="menuIcons">
             <i class="fa-regular fa-heart" id="my-list"></i>
-            <!-- <i class="fa-solid fa-heart" id="my-list-solid"></i> -->
           </a>
           <a href="../index.html" class="menuIcons">
             <i class="fa-solid fa-house" id="home"></i>
+          </a>
+          <a href="./profile.html" class="menuIcons">
+            <i class="fa-solid fa-user" id="profile-icon"></i>
           </a>
         </div>
       </div>
@@ -76,27 +74,10 @@
   </header>
 
   <main>
-    <section class="containerList">
-      <div id="searchResultText"></div>
-      <div class="searchListIcons">
-        <i id="searchListIconInline" class="fa-solid fa-bars"></i>
-        <i id="searchListIconGrid" class="fa-solid fa-grip"></i>
-      </div>
-      <div id="searchList">
-        <!-- <h2 class="animeTitle">Title</h2>
-        <h2 class="animeJapTitle">Jap Title</h2>
-        <h3 class="episodes">Episodes</h3>
-        <h3 class="genres">Genres</h3>
-        <img src="#" alt="animeImg" class="animeImg">
-        <h3 class="studios">Studios</h3>
-        <p class="aired">Aired</p>
-        <p class="synopsis">Synopsis</p>
-        <a href="" class="animeUrl">Url</a> -->
-      </div>
-    </section>
+    <h1 style="margin-top: 200px">Profile Page</h1>
   </main>
 
-  <script src="../Scripts/script.js"></script>
+  <script src="../Scripts/script.js" type="module"></script>
 </body>
 
 </html>
